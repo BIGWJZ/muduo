@@ -66,8 +66,8 @@ TcpClient::TcpClient(EventLoop* loop,
   connector_->setNewConnectionCallback(
       std::bind(&TcpClient::newConnection, this, _1));
   // FIXME setConnectFailedCallback
-  LOG_INFO << "TcpClient::TcpClient[" << name_
-           << "] - connector " << get_pointer(connector_);
+  // LOG_INFO << "TcpClient::TcpClient[" << name_
+  //          << "] - connector " << get_pointer(connector_);
 }
 
 TcpClient::~TcpClient()
